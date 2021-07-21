@@ -80,7 +80,7 @@ def main():
     saved = False
     
     #SetupWindow
-    screen = pygame.display.set_mode((1200,900))
+    screen = pygame.display.set_mode((1200,900),pygame.RESIZABLE)
     pygame.display.set_caption('Odometry Test')
     
     font = pygame.font.SysFont('Comic Sans MS', 18)
@@ -151,7 +151,7 @@ def main():
 
             position = font.render(f'{bot_1.xpos:.2f}, {bot_1.ypos:.2f}', False, (0,0,0))
             screen.blit(position, (25, 25))
-
+            
             if mode == 'manual':
                 left_input = 0
                 right_input = 0
